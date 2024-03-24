@@ -50,7 +50,6 @@ Dépôt pour les devoirs du cours d'Outils de Traitement de Corpus de M1 TAL (Pl
             - Les étiquettes/tags de langues associées à ces textes (`language_code`)
 - Comment utiliser ce corpus :
     - Avec la bibliothèque `datasets` et de la manière suivante :
-        -
         ```py
             from datasets import load_dataset
             dataset = load_dataset("Mike0307/language-detection")
