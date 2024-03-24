@@ -28,16 +28,16 @@ Dépôt pour les devoirs du cours d'Outils de Traitement de Corpus de M1 TAL (Pl
             - une branche `refs/convert/parquet` avec 20 commits
     - Dans quel but : le but n'est pas clairement précisé, mais d'après le titre du corpus, il doit être utilisé pour développer, entrainer et tester un modèle de détection de langue.
     - Langues : l'ensemble des langues n'est pas renseigné explicitement, mais vu la diversité des langues que l'on peut observer dans la Dataset Viewer mise à disposition (et dans le `language_code`), on a (avec leur proportion dans le corpus):
-        - du portugais (9,9%),
-        - du polonais (10,2%),
-        - du russe (9,7%),
-        - du néerlandais (9,8%),
-        - de l'anglais (10,1%),
-        - du mandarin taiwanais (10,1%),
-        - de l'allemand (9,9%),
-        - du français (10,1%),
-        - de l'italien (9,9%),
-        - de l'espagnol (10,4%)
+        - du portugais (pt : 9,9%),
+        - du polonais (pl : 10,2%),
+        - du russe (ru : 9,7%),
+        - du néerlandais (nl : 9,8%),
+        - de l'anglais (en : 10,1%),
+        - du mandarin taiwanais (zh-TW : 10,1%),
+        - de l'allemand (de : 9,9%),
+        - du français (fr : 10,1%),
+        - de l'italien (it : 9,9%),
+        - de l'espagnol (es : 10,4%)
         - On remarque qu'on a essayé d'avoir des proportions de langues relativement proche (avec une différence de proportion de l'ordre de 0,7 point de pourcentage) afin sûrement de ne pas biaiser les phases d'entrainement, de développement et de test
     - Description du corpus :
         - L'ensemble du corpus a été divisé en 3 parties :
@@ -45,4 +45,17 @@ Dépôt pour les devoirs du cours d'Outils de Traitement de Corpus de M1 TAL (Pl
             - Un corpus d'entrainement `train` de 33 900 lignes
             - Un corpus de test `test` de 4 240 lignes
             - On remarque que la part du corpus `train` est très importante par rapport aux autres (environ  75% du total) et que les corpus `validate` et `test` ont la même taille et une proportion beaucoup plus petite (environ 12.5% chacun)
-        - (EN COURS)
+        - Le corpus contient les informations suivantes :
+            - Les textes (`text`), qui sont une ou plusieurs phrases dans une même langue
+            - Les étiquettes/tags de langues associées à ces textes (`language_code`)
+- Comment utiliser ce corpus :
+    - Avec la bibliothèque `datasets` et de la manière suivante :
+        -
+        ```py
+            from datasets import load_dataset
+            dataset = load_dataset("Mike0307/language-detection")
+        ```
+    - En clonant le dépôt de la manière suivante :
+        - `git lfs install` pour Git Large File Storage
+        - `git clone https://huggingface.co/datasets/Mike0307/language-detection`
+        - `GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/datasets/Mike0307/language-detection` si on veut cloner le dépôt sans les fichiers de grande taille (juste leur pointeur)
