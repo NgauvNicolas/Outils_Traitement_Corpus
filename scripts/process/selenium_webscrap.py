@@ -314,8 +314,12 @@ print(ensemble_tuple)
 print(len(ensemble_tuple))
 
 
+
+titres = ['text', 'language_code']
+
 # Ouvrir fichier tsv en écriture qui servira de corpus
 with open('donnees.tsv', 'w') as fichier_tsv:
+    fichier_tsv.write('\t'.join(titres) + '\n')
     # Capturer le contenu textuel, la langue, etc. et l'écrire dans un fichier csv
     for url, langue in ensemble_tuple:
         # Charger la page web
