@@ -5,8 +5,9 @@ Dépôt pour les devoirs du cours d'Outils de Traitement de Corpus de M1 TAL (Pl
 
 ### Devoir de la séance
 - Tache que je veux réaliser : Détecter la langue d'un texte
+- Type de la tache : Classification
 - Un corpus qui répond à cette tache : https://huggingface.co/datasets/Mike0307/language-detection
-- A quel typre de prédiction peut servir ce corpus :
+- A quel type de prédiction peut servir ce corpus :
     - Ce corpus peut servir à faire de la classification :
         - La langue est une variable catégorielle, et ce corpus peut servir à classifier chaque texte dans une catégorie de langue spécifique.
 - A quel modèle il a servi :
