@@ -1,0 +1,54 @@
+---
+task_categories:
+- text classification (language detection)
+language:
+- multi-language
+pretty_name: multi-language wiki dataset
+size_categories:
+- 100K<n<1M
+---
+
+# Dataset Card for Dataset Name
+
+Ce dataset est constitué de contenu textuels d'articles de wikipédia dans différentes langues pour la classification servant à la détection de langues, scrappé depuis la page web wikipedia de l'article sur l'entropie dans la théorie de l'information (en anglais).
+
+## Dataset Details
+
+### Dataset Description
+
+corpus:
+  description: "Corpus de contenus textuels d'articles de wikipedia dans différentes langues pour la classification et plus précisément la détection de langues"
+  format: "TSV"
+
+  columns (processed version):
+    - name: "text"
+      type: "string"
+      description: "Un texte dans une langue particulière"
+    - name: "language_code"
+      type: "string"
+      description: "Le code ISO 639-1 des langues"
+
+  columns (raw version):
+    - name: "text"
+      type: "string"
+      description: "Un texte dans une langue particulière"
+    - name: "language_code"
+      type: "string"
+      description: "Le code ISO 639-1 des langues"
+
+- **Curated by:** Nicolas NGAUV
+- **Language(s) (NLP):** Multi-language
+
+## Uses
+
+Ce dataset peut servir à faire un modèle de classification dans le cadre de la détection de langues.
+
+## Dataset Creation
+
+### Source Data
+
+Le dataset est issu de la page web wikipedia en version en : https://en.wikipedia.org/wiki/Entropy_(information_theory)
+
+#### Data Collection and Processing
+
+L'extraction des données a été effectuée avec Selenium.
